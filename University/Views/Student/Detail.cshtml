@@ -1,0 +1,19 @@
+﻿@model StudentDetailViewModel
+@{
+    var std = Model.Std;
+}
+<h1>Student details:</h1>
+<ul>
+    <li>Name, Surname: @std.Name @std.Lastname</li>
+    <li>Group: @std.Group</li>
+    <li>Field: @std.Field</li>
+</ul>
+
+
+<h1>Groups:</h1>
+<ul>
+    @foreach(var gr in Model.Groups)
+    {
+        <li>@gr.Name</li>
+    }
+</ul>

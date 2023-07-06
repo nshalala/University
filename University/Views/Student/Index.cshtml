@@ -1,0 +1,51 @@
+﻿@model StudentViewModel
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th class="text-center fs-3" colspan="5">Students</th>
+        </tr>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Lastname</th>
+            <th scope="col">Field</th>
+            <th scope="col">Group</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var std in Model.Students)
+        {
+            <tr>
+                <th scope="row">@std.Id</th>
+                <td>@std.Name</td>
+                <td>@std.Lastname</td>
+                <td>@std.Field</td>
+                <td>@std.Group</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<table class="table table-striped w-25 m-auto">
+    <thead>
+        <tr>
+            <th class="text-center fs-3" colspan="2">Groups</th>
+        </tr>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var grp in Model.Groups)
+        {
+            <tr>
+                <th scope="row">@grp.Id</th>
+                <td>@grp.Name</td>
+            </tr>
+        }
+    </tbody>
+</table>

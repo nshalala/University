@@ -1,0 +1,22 @@
+﻿@model List<Group>
+
+<table class="table table-striped w-25 m-auto">
+    <thead>
+        <tr>
+            <th class="text-center fs-3" colspan="2">Groups</th>
+        </tr>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var grp in Model)
+        {
+            <tr>
+                <th scope="row">@grp.Id</th>
+                <td>@grp.Name</td>
+            </tr>
+        }
+    </tbody>
+</table>
